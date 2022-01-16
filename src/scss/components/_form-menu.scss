@@ -1,0 +1,15 @@
+.form-menu {
+    padding: 1em;
+
+    > .item > .link {
+        text-decoration: none;
+        color: #000;
+    }
+
+    /// Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        > .item > .link {
+            color: #fff;
+        }
+    }
+}

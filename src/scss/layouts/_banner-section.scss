@@ -1,0 +1,94 @@
+.banner-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    border-bottom-left-radius: 5em;
+    overflow: hidden;
+    background: url("../../images/bg-pattern-intro-mobile.svg") no-repeat 40% 35%, linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+
+    > .contentbox {
+        align-self: center;
+        padding: 0 1.5em;
+
+        > .title,
+        > .description {
+            color: #fff;
+            text-align: center;
+        }
+
+        > .title {
+            margin-bottom: .5em;
+        }
+
+        > .description {
+            opacity: .8;
+            margin-bottom: 2em;
+        }
+
+        > .actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+        }
+    }
+
+    /// Small devices (portrait tablets and large phones, 400px and up)
+    @media only screen and (min-width: 400px) {
+        > .contentbox {            
+            > .title {
+                font-size: 2rem;
+            }
+        }   
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        > .contentbox {
+            padding-left: 3em;   
+            padding-right: 3em; 
+
+            > .title {
+                font-size: 2.5rem;
+            }
+        }   
+    }
+
+    @media only screen and (min-width: 768px) {
+        background: url("../../images/bg-pattern-intro-mobile.svg") no-repeat 45% 55% / 300% 400%, linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+
+        > .contentbox {
+            padding-left: 4em;
+            padding-right: 4em;
+
+            > .title {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+
+    > .close-btn {
+        display: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+        align-items: center;
+        gap: 1.5em;
+        padding: 1em 4em;
+
+        > .open-btn,
+        > .close-btn {
+            display: none !important;
+        }
+    }
+
+    @media only screen and (min-width: 868px) {
+        gap: 3em;
+    }
+}

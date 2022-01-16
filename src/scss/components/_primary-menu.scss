@@ -1,0 +1,44 @@
+.primary-menu {
+    border-bottom: .01em solid hsla(0%, 0%, 50%, .6);
+    
+    > .item {
+        > .link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        &.-active {    
+            > .link {
+                font-weight: 500;
+
+                > .image {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            > .sub-menu {
+                display: block;
+            }
+        }
+    }
+
+    /// Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        border-bottom: none;
+
+        > .item > .link {
+            color: #fff;
+
+            > .image {
+                filter: invert(1);
+            }
+        }
+
+        > .item > .sub-menu {
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            top: 4em;
+        }
+    }
+}

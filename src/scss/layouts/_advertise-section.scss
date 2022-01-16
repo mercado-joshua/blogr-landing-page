@@ -1,0 +1,113 @@
+.advertise-section {
+    margin-top: 10em;
+    background: url("../../images/bg-pattern-circles.svg") no-repeat 50% -10em / 150%, hsl(237, 17%, 21%);
+    border-top-right-radius: 5em;
+    border-bottom-left-radius: 5em;
+    overflow: hidden;
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    @media only screen and (min-width: 768px) {
+        background: url("../../images/bg-pattern-circles.svg") no-repeat -20% -5em / 50%, hsl(237, 17%, 21%);
+        margin-top: 5em; 
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+}
+
+.advertisebox {
+    > .imagebox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: -9em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 18.5em;
+    }
+
+    > .contentbox {
+        padding: 11em 1.5em 4em 1.5em;
+        color: #fff;
+
+        > .title,
+        > .description {
+            text-align: center;
+        }
+
+        > .title {
+            margin-bottom: 1em;
+        }
+
+        > .description {
+            opacity: .7;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .imagebox {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            margin: 0;
+            margin-top: 1em;
+            width: 20em;
+        }
+
+        > .contentbox {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            padding: 2.5em 0;
+
+            > .title,
+            > .description {
+                text-align: left;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 780px) {
+        > .imagebox {
+            margin-top: -3em;
+            width: 21em;
+        }
+    }
+
+    @media only screen and (min-width: 830px) {
+        > .imagebox {
+            margin-left: 1em;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        > .imagebox {
+            width: 24em;
+        }
+    }
+
+    @media only screen and (min-width: 1082px) {
+        > .imagebox {
+            margin-left: 3em;
+        }
+    }
+
+    @media only screen and (min-width: 1100px) {
+        > .imagebox {
+            margin-left: 4em;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        > .imagebox {
+            margin-left: 6em;
+        }
+    }
+}

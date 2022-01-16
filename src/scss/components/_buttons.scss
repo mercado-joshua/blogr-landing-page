@@ -1,0 +1,52 @@
+.open-btn,
+.close-btn,
+.cta-btn {
+    all: unset;
+    cursor: pointer;
+}
+
+.open-btn,
+.close-btn {
+    display: none;
+}
+
+.open-btn {
+    &.-active {
+        display: block;
+    }
+}
+
+.close-btn {
+    &.-active {
+        display: block;
+    }
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: .5em 1em;
+    border: 1px solid #fff;
+    border-radius: 5em;
+    color: #fff;
+
+    &.-active {
+        background-color: #fff;
+        color: hsl(356, 100%, 66%);
+    }
+
+    &.-navbar {
+        background-color: hsl(356, 100%, 66%);
+        color: #fff;
+
+        /// Medium devices (landscape tablets, 768px and up)
+        @media only screen and (min-width: 768px) {
+            padding: .5em 1em;
+            background-color: #fff;
+            color: hsl(356, 100%, 66%);
+        }
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+}
